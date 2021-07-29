@@ -5,4 +5,4 @@ RUN apk update && \
     apk add mc
 EXPOSE 80
 COPY index.html /var/www/localhost/htdocs/index.html
-CMD ["/usr/sbin/httpd"]
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
